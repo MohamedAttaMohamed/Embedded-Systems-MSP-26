@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    char x;
-    x = 'c';
+
+    char character ='C';
     
-    printf("%c", x);
-    
+    printf("%c",character);
+    printf("\n%c",character - 2);
+    printf("\n%c",character + 2);
 
     return 0;
 }
