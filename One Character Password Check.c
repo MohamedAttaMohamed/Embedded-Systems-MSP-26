@@ -1,18 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    char password;
-    char correct_pass = 'M';
-    
-    while (1) {
+    char password = 'A'; 
+    char input;
+    char username[] = "Mohamed"; 
+    do {
         printf("Enter your password: ");
-        scanf(" %c", &password);
+        scanf(" %c", &input);
+        
+    } while (input != password);
 
-        if (password == correct_pass) {
-            printf("\nHello, Mohamed Atta \n");
-            break;
-        }
-    }
+    printf("\nHello, %s\n", username);
 
     return 0;
 }
