@@ -1,17 +1,29 @@
 #include <stdio.h>
+#include <string.h>
+
+struct Circle {
+    float radius;
+    float diameter;
+    float perimeter;
+    float area;
+};
 
 int main() {
-    float radius;
-    float pi = 3.14;
-    
-    printf("Input the radius: ");
-    scanf("%f", &radius);
+    struct Circle c;
+    char buffer[20];
+    const float PI = 3.14159;
 
-    float perimeter = 2 * pi * radius;
-    float area = pi * radius * radius;
+    printf("Enter circle radius: ");
+    if (fgets(buffer, sizeof(buffer), stdin)) {
+        sscanf(buffer, "%f", &c.radius);
+    }
 
-    printf("Perimeter of the Circle = %.2f inches\n", perimeter);
-    printf("Area of the Circle = %.2f square inches\n", area);
-    
+    c.diameter = 2 * c.radius;
+    c.perimeter = 2 * PI * c.radius;
+    c.area = PI * c.radius * c.radius;
+
+    printf("perimeter = %.2f\n", c.perimeter);
+    printf("area = %.2f\n", c.area);
+
     return 0;
 }
