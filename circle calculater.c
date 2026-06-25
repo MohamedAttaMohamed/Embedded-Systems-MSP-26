@@ -14,6 +14,7 @@ int main() {
     const float PI = 3.14159;
 
     printf("Enter circle radius: ");
+    
     if (fgets(buffer, sizeof(buffer), stdin)) {
         sscanf(buffer, "%f", &c.radius);
     }
